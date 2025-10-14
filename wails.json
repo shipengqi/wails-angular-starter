@@ -1,0 +1,13 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "wails-angular-starter",
+  "outputfilename": "wails-angular-starter",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm start",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "shipengqi",
+    "email": "pooky.shi@gamil.com"
+  }
+}
