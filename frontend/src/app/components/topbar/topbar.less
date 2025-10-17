@@ -1,0 +1,48 @@
+.topbar {
+    height: 36px;
+    background-color: #2d2d2d;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    user-select: none;
+    -webkit-app-region: drag; /* 顶部区域可拖动窗口 */
+  }
+  
+  .topbar .left,
+  .topbar .right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 13px;
+    color: #9cdcfe;
+    margin-right: 20px;
+    -webkit-app-region: no-drag;
+  }
+  
+  .nav-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    -webkit-app-region: no-drag; /* 按钮可点击 */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .nav-btn:hover {
+    color: white;
+    background-color: #3e3e3e;
+  }
+  
+  #titlebar {
+    -webkit-app-region: drag !important;
+  }

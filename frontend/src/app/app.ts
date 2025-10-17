@@ -7,12 +7,14 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { stopAppLoader } from './core/utils/preloader';
 import { WindowSetTitle } from '../../wailsjs/runtime/runtime';
+import { Topbar } from './components/topbar/topbar';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterLink,
-    RouterOutlet
+    RouterOutlet,
+    
 ],
   standalone: true,
   templateUrl: './app.html',
@@ -41,7 +43,7 @@ export class App implements OnInit {
         // Todo Prompts that the page needs to be refreshed (new version), or fails to load
       }
       if (ev instanceof NavigationEnd) {
-        this.stopAppLoader();
+        // this.stopAppLoader();
 
         const route = this._router.routerState.snapshot.root;
         this.setTitle(route);

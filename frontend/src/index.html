@@ -4,11 +4,104 @@
   <meta charset="UTF-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>wails-angular-starter</title>
-  <style type="text/css">.app-loader{position:fixed;top:0;left:0;z-index:9999;width:100%;height:100%;overflow:hidden;background:#fff;transition:opacity .65s}.app-loader-hidden-add{display:block;opacity:1}.app-loader-hidden-add-active{opacity:0}.app-loader-hidden{display:none}.cs-loader{position:absolute;top:0;left:0;width:100%;height:100%}.cs-loader-inner{position:absolute;top:50%;width:100%;color:#49a9ee;text-align:center;transform:translateY(-50%)}.cs-loader-inner label{display:inline-block;font-size:12px;opacity:0}@keyframes lol{0%{transform:translateX(-300px);opacity:0}33%{transform:translateX(0);opacity:1}66%{transform:translateX(0);opacity:1}100%{transform:translateX(300px);opacity:0}}.cs-loader-inner label:nth-child(6){animation:lol 3s infinite ease-in-out}.cs-loader-inner label:nth-child(5){animation:lol 3s .1s infinite ease-in-out}.cs-loader-inner label:nth-child(4){animation:lol 3s .2s infinite ease-in-out}.cs-loader-inner label:nth-child(3){animation:lol 3s .3s infinite ease-in-out}.cs-loader-inner label:nth-child(2){animation:lol 3s .4s infinite ease-in-out}.cs-loader-inner label:nth-child(1){animation:lol 3s .5s infinite ease-in-out}</style>
+  <!-- <style type="text/css">
+    .app-loader {
+      position:fixed;top:0;left:0;z-index:9999;width:100%;height:100%;overflow:hidden;background:#fff;transition:opacity .65s
+    }
+    .app-loader-hidden-add {
+      display:block;opacity:1
+    }
+    .app-loader-hidden-add-active {
+      opacity:0
+    }
+    .app-loader-hidden {
+      display:none
+    }
+    .cs-loader {
+      position:absolute;top:0;left:0;width:100%;height:100%
+    }
+    .cs-loader-inner {
+      position:absolute;top:50%;width:100%;color:#49a9ee;text-align:center;transform:translateY(-50%)
+    }
+    .cs-loader-inner label {
+      display:inline-block;font-size:12px;opacity:0
+    }
+    @keyframes lol {
+      0% {
+        transform:translateX(-300px);opacity:0
+      }
+      33% {
+        transform:translateX(0);opacity:1
+      }
+      66% {
+        transform:translateX(0);opacity:1
+      }
+      100% {
+        transform:translateX(300px);opacity:0}
+    }
+    .cs-loader-inner label:nth-child(6) {
+      animation:lol 3s infinite ease-in-out
+    }
+    .cs-loader-inner label:nth-child(5) {
+      animation:lol 3s .1s infinite ease-in-out
+    }
+    .cs-loader-inner label:nth-child(4) {
+      animation:lol 3s .2s infinite ease-in-out
+    }
+    .cs-loader-inner label:nth-child(3) {
+      animation:lol 3s .3s infinite ease-in-out
+    }
+    .cs-loader-inner label:nth-child(2) {
+      animation:lol 3s .4s infinite ease-in-out
+    }
+    .cs-loader-inner label:nth-child(1) {
+      animation:lol 3s .5s infinite ease-in-out
+    }
+  </style> -->
+  <style type="text/css">
+    .app-loader {
+      position:fixed;top:0;left:0;z-index:9999;width:100%;height:100%;overflow:hidden;background:#fff;transition:opacity .65s
+    }
+    .app-loader-hidden-add {
+      display:block;opacity:1
+    }
+    .app-loader-hidden-add-active {
+      opacity:0
+    }
+    .app-loader-hidden {
+      display:none
+    }
+    .cs-loader {
+      position:absolute;top:0;left:0;width:100%;height:100%
+    }
+    .cs-loader-inner {
+      position:absolute;top:50%;width:100%;color:#49a9ee;text-align:center;transform:translateY(-50%);
+    }
+    .cs-loader-inner label {
+      display:inline-block;font-size:12px;opacity:0;
+      animation: lol 1.8s infinite ease-in-out;
+    }
+    @keyframes lol {
+      0%   { transform: scale(1); opacity: 0.6; }
+      30%  { transform: scale(1.5); opacity: 1; } /* 放大峰值 */
+      60%  { transform: scale(1); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 0.6; }
+    }
+    .cs-loader-inner label:nth-child(1) {
+      animation-delay: 0ms;
+    }
+    .cs-loader-inner label:nth-child(2) {
+      animation-delay: 150ms;
+    }
+    .cs-loader-inner label:nth-child(3) {
+      animation-delay: 300ms;
+    }
+  </style>
 </head>
 <body>
+  
   <app-root></app-root>
-  <div class="app-loader">
+  <!-- <div class="app-loader">
     <div class="cs-loader">
       <div class="cs-loader-inner">
         <label> ●</label>
@@ -19,6 +112,27 @@
         <label> ●</label>
       </div>
     </div>
+  </div> -->
+  <div class="app-loader">
+    <div class="cs-loader">
+      <div class="cs-loader-inner">
+        <label> ●</label>
+        <label> ●</label>
+        <label> ●</label>
+      </div>
+    </div>
   </div>
+  <!-- <div class="loader" role="status" aria-label="加载中">
+    <span class="loader__dot" aria-hidden="true"></span>
+    <span class="loader__dot" aria-hidden="true"></span>
+    <span class="loader__dot" aria-hidden="true"></span>
+  </div> -->
+  <!-- 改颜色：修改 .loader__dot { background: ... } 或用 color + background: currentColor;。
+
+改速度：调整 animation-duration（当前是 900ms）或 animation-delay（150ms、300ms）以获得不同节奏。
+
+改大小：修改 .loader__dot 的 width / height 和 scale 最大值（1.8）来调整放大幅度。
+
+垂直排列或横向居中：容器使用 flex-direction 切换布局。 -->
 </body>
 </html>
